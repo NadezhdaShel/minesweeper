@@ -1,0 +1,26 @@
+$color-dark: rgb(0, 0, 0);
+$color-gray-dark: rgb(69, 69, 71);
+$color-gray-light: #fff; //rgb(245, 245, 248);
+$color-gray: rgb(212, 212, 214);
+$color-blue: rgb(58, 73, 209);
+$color-blue-light: rgb(215, 218, 243);
+$color-border: rgba($color-gray-dark, 0.4);
+$color-active: rgba($color-blue, 0.5);
+
+@mixin setProperty($style, $color) {
+    #{$style}: #{$color};
+}
+
+:root {
+    @include setProperty('--color-background', $color-blue-light);
+    @include setProperty('--color-font-primary', $color-dark);
+    @include setProperty('--color-font-title', $color-blue);
+    @include setProperty('--color-font-score', $color-blue);
+    @include setProperty('--color-background-button', $color-gray);
+}
+
+:root[theme='dark'] {
+    @include setProperty('--color-background', $color-dark);
+    @include setProperty('--color-font-primary', $color-gray);
+
+}

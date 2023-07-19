@@ -1,0 +1,42 @@
+.button {
+    width: 32px;
+    height: 32px;
+    margin-right: 20px;
+    background-size: 32px 32px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    opacity: 0.8;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
+    box-shadow: inset 1px 2px 3px $color-border, inset -1px -2px 3px $color-border;
+
+    &.restart {
+        background-image: url("assets/svg/reload.svg");
+    }
+
+    &.settings {
+        background-image: url("assets/svg/settings.svg");
+    }
+
+    &.theme {
+        background-image: url("assets/svg/reload.svg");
+    }
+
+    &:hover {
+        opacity: 1;
+    }
+
+    &:active {
+        border: 0;
+        outline: 0;
+        transform: scale(1.1);
+    }
+
+    &:last-child {
+        margin-right: 0px;
+    }
+}

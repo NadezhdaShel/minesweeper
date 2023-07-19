@@ -1,0 +1,79 @@
+  .settings-menu {
+    min-width: 300px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    padding: 30px;
+    border-radius: 10px 0 0 0;
+    background-color: rgb(255, 255, 255);
+    will-change: transform;
+    transform: translateX(100%);
+    transition: transform 0.5s ease 0s, opacity 0.5s ease 0s, visibility 0s 0.5s;
+
+    &.open {
+      opacity: 1;
+      transform: translateX(0%);
+      visibility: visible;
+      transition: transform 0.5s ease 0s, opacity 0.5s ease 0s, visibility 0s 0s;
+    }
+
+    &__level-group {
+      border: none;
+    }
+
+    &__level-group-title {
+      margin-bottom: 10px;
+      font-size: 1.4rem;
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    input[type="radio"]:checked+&__level-title::before {
+      color: #C5B358;
+    }
+
+    &__level-title {
+      position: relative;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      padding-left: 20px;
+      margin-bottom: 5px;
+      font-size: 1.2rem;
+
+      &::before {
+        display: inline-block;
+        content: "\2713";
+        position: absolute;
+        left: 0;
+        top: -2px;
+        font-weight: 900;
+        color: #fff;
+      }
+    }
+
+    &__property {
+      // display: flex;
+      margin-bottom: 20px;
+    }
+
+    &__input {
+      height: 2em;
+      width: 5em;
+      margin-right: 15px;
+      font-size: 1.2rem;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    &__input-caption {
+      margin-right: 5px;
+      font-size: 1.0rem;
+    }
+  }

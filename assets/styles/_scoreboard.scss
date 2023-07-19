@@ -1,0 +1,25 @@
+.scoreboard {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.scoreboard__timer,
+.scoreboard__clickCounter {
+    padding: 0.3em;
+    border-radius: 5px;
+    box-shadow: inset 1px 2px 3px $color-border, inset -1px -2px 3px $color-border;
+    font-size: 2.0rem;
+    font-weight: 700;
+    color: var(--color-font-score);
+    background-color: var(--color-background-button);
+}
+
+.scoreboard__timer {
+    min-width: 5em;
+    margin-right: 20px;
+}
+
+.scoreboard__clickCounter {
+    min-width: 4em;
+}
